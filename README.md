@@ -1,2 +1,2 @@
 # infrastructure
-sql scripts for creating the database
+scripts for creating the servers, and database
