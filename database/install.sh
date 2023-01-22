@@ -2,8 +2,9 @@ apt update
 apt upgrade -y
 apt install -y mysql-server
 
-curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-sudo chmod a+rx /usr/local/bin/youtube-dl
+mkdir -p ~/tune-bot/bin
+curl -L https://yt-dl.org/downloads/latest/youtube-dl -o ~/tune-bot/bin/download
+sudo chmod a+rx ~/tune-bot/bin/download
 mkdir -p ~/tune-bot/library
 
 source ~/tune-bot/infrastructure/database/vars.env
