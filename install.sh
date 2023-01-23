@@ -1,8 +1,6 @@
 git stash
 git pull
 
-sh database/install.sh
-#sh discord/install.sh
-sh api/install.sh
-
-#for script in */install.sh; do sh $script; done
+sh ~/tune-bot/infrastructure/database/install.sh
+#sh ~/tune-bot/infrastructure/discord/install.sh
+sh ~/tune-bot/infrastructure/api/install.sh
