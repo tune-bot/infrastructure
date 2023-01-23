@@ -15,6 +15,13 @@ cd infrastructure
 sudo chmod 777 install.sh */install.sh 
 ```
 
+refresh the repo
+```
+git stash
+git pull
+sudo chmod 777 install.sh */install.sh 
+```
+
 create all infrastructure
 ```
 cd ..
