@@ -11,19 +11,17 @@ setup the repo
 mkdir -p ~/tune-bot
 cd ~/tune-bot
 git clone https://github.com/tune-bot/infrastructure.git
-cd infrastructure
-sudo chmod 777 install.sh */install.sh 
 ```
 
 refresh the repo
 ```
+cd ifrastructure
 git stash
 git pull
-sudo chmod 777 install.sh */install.sh 
+cd ..
 ```
 
 create all infrastructure
 ```
-cd ..
 sudo ./infrastructure/install.sh
 ```
