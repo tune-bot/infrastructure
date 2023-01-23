@@ -1,3 +1,5 @@
-sh ~/tune-bot/infrastructure/database/install.sh
-#sh ~/tune-bot/infrastructure/discord/install.sh
-sh ~/tune-bot/infrastructure/api/install.sh
+pwd
+ls
+sh infrastructure/database/install.sh
+#sh infrastructure/discord/install.sh
+#sh infrastructure/api/install.sh
