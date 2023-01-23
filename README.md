@@ -8,7 +8,7 @@ First you need to enter the database credentials you'll use to connect to the da
 
 setup the repo
 ```
-mkdir ~/tune-bot
+mkdir -p ~/tune-bot
 cd ~/tune-bot
 git clone https://github.com/tune-bot/infrastructure.git
 cd infrastructure
@@ -18,5 +18,5 @@ sudo chmod 777 install.sh */install.sh
 create all infrastructure
 ```
 cd ..
-sudo sh infrastructure/intstall.sh
+sudo ./infrastructure/intstall.sh
 ```
