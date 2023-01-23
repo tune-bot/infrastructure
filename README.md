@@ -25,3 +25,11 @@ create all infrastructure
 ```
 sudo bash infrastructure/install.sh
 ```
+
+You will then have executables in `~/tune-bot/bin` which can execute each service like this:
+
+```
+cd ~/tune-bot
+sudo bin/database &
+sudo bin/api &
+```
