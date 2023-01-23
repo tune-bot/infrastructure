@@ -23,5 +23,5 @@ cd ..
 
 create all infrastructure
 ```
-sudo ./infrastructure/install.sh
+sudo bash infrastructure/install.sh
 ```
