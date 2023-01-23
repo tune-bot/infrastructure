@@ -25,5 +25,5 @@ sudo chmod 777 install.sh */install.sh
 create all infrastructure
 ```
 cd ..
-sudo ./infrastructure/intstall.sh
+sudo ./infrastructure/install.sh
 ```
