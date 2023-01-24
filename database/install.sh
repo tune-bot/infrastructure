@@ -2,7 +2,7 @@
 
 apt update
 apt upgrade -y
-apt install -y mysql-server
+apt install -y mysql-server python3
 
 mkdir -p library
 mkdir -p bin
