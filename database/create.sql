@@ -24,7 +24,11 @@ create table if not exists `discord` (
 
 create table if not exists `song` (
     `id` binary(16) primary key,
-	`url` varchar(256) not null unique
+	`url` varchar(256) not null unique,
+    `title` varchar(64) not null,
+    `artist` varchar(128) not null,
+    `album` varchar(64) not null,
+    `year` int not null
 );
 
 create table if not exists `playlist` (
