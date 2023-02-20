@@ -28,7 +28,7 @@ create table if not exists `song` (
     `title` varchar(64) not null,
     `artist` varchar(128) not null,
     `album` varchar(64) not null,
-    `year` int not null
+    `year` smallint unsigned not null
 );
 
 create table if not exists `playlist` (
