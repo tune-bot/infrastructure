@@ -32,4 +32,5 @@ You will then have executables in `~/tune-bot/bin` which can execute each servic
 cd ~/tune-bot
 sudo bin/database &
 sudo bin/api &
+sudo bin/discord &
 ```
