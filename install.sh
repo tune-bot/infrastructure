@@ -13,7 +13,7 @@ apt remove golang -y
 apt autoremove -y
 
 # Remove old Go versions and install Go v1.20
-CUR_VER=$(go version)
+CUR_VER=$([ -f /usr/local/go/bin/go ] && /usr/local/go/bin/go version)
 TARGET_VER=go1.20
 
 if [[ "$CUR_VER" != *"$TARGET_VER"* ]]; then
