@@ -22,16 +22,8 @@ if [[ "$CUR_VER" != *"$TARGET_VER"* ]]; then
     tar -C /usr/local -xzf /tmp/tune-bot/go.tar.gz
 fi
 
-# Update PATH to include Go binaries
-export PATH=$PATH:/usr/local/go/bin:~/go/bin
-export GOPATH=~/go
-export CGO_ENABLED=1
-
-# Remove duplicate PATH entries
-CLEAN_PATH=$(printf %s "$PATH" | awk -v RS=: -v ORS=: '!arr[$0]++')
-export PATH=${CLEAN_PATH::-1}
-
 # Perform service-specific installations
+bash infrastructure/util/gopath.sh
 bash infrastructure/database/install.sh
 bash infrastructure/api/install.sh
 bash infrastructure/discord/install.sh

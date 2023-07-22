@@ -9,6 +9,7 @@ if grep -q BOT_TOKEN infrastructure/discord/vars.env; then
 fi
 
 echo "#!/bin/bash" > bin/discord
+echo "bash infrastructure/util/gopath.sh" >> bin/discord
 echo "source infrastructure/discord/vars.env" >> bin/discord
 echo "source infrastructure/database/vars.env" >> bin/discord
 echo "cd discord && go run ." >> bin/discord
