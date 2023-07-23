@@ -4,7 +4,7 @@ sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrest
 
 apt update
 apt upgrade -y
-apt install -y curl mysql-server python-is-python3
+apt install -y curl mysql-server python-is-python3 ffmpeg
 
 mkdir -p library
 mkdir -p bin
