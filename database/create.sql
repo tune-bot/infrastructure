@@ -49,6 +49,6 @@ create table if not exists `playlist_song` (
     constraint `no_duplicate_song_per_playlist` unique (`song_id`, `playlist_id`)
 );
 
-create user if not exists 'local_user'@'localhost' identified by 'local_password';
-grant all privileges on `tune_bot`.* to 'local_user'@'localhost';
+create user if not exists 'DB_USER'@'DB_HOST' identified by 'DB_PASS';
+grant all privileges on `tune_bot`.* to 'DB_USER'@'DB_HOST';
 flush privileges;

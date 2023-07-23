@@ -6,4 +6,4 @@ drop table `device`;
 drop table `discord`;
 drop table `user`;
 drop database `tune_bot`;
-drop user 'local_user'@'localhost';
+drop user 'DB_USER'@'DB_HOST';
