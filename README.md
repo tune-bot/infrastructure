@@ -16,7 +16,7 @@ git clone https://github.com/tune-bot/infrastructure.git
 
 refresh the repo
 ```
-cd ifrastructure
+cd infrastructure
 git stash
 git pull
 cd ..
