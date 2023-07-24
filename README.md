@@ -3,18 +3,28 @@ scripts for creating the servers, and database
 
 This repository should be located at `~/tune-bot/infrastructure`.
 
-First you need to enter the database credentials you'll use to connect to the database in `database/vars.env`.
-First you need to enter the discord bot authentication token in `discord/vars.env`.
+First you need to enter the database credentials you'll use to connect to the database in `database/vars.env`:
+```
+export DB_USER=<database user>
+export DB_PASS=<database password>
+export DB_HOST=<database host IP>
+```
 
 
-setup the repo
+You will also need to enter the discord bot authentication token in `discord/vars.env`:
+```
+export DISCORD_TOKEN=<Discord API token>
+```
+
+
+Setup the repo:
 ```
 mkdir -p ~/tune-bot
 cd ~/tune-bot
 git clone https://github.com/tune-bot/infrastructure.git
 ```
 
-refresh the repo
+Refresh the repo:
 ```
 cd infrastructure
 git stash
@@ -22,7 +32,7 @@ git pull
 cd ..
 ```
 
-create all infrastructure
+Create all infrastructure:
 ```
 sudo bash infrastructure/install.sh
 ```
