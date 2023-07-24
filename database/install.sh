@@ -1,14 +1,18 @@
 #!/bin/bash
 
+sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
+
 apt update
 apt upgrade -y
-apt install -y curl mysql-server python-is-python3
+apt install -y curl mysql-server python-is-python3 ffmpeg
 
 mkdir -p library
 mkdir -p bin
 
-curl -L https://yt-dl.org/downloads/latest/youtube-dl -o bin/download
+curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o bin/download
 chmod a+rx bin/download
+
+bin/download -U
 
 source infrastructure/database/vars.env
 sed -i "s|DB_USER|$DB_USER|g" infrastructure/database/create.sql
