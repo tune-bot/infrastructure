@@ -10,12 +10,10 @@ export DB_PASS=<database password>
 export DB_HOST=<database host IP>
 ```
 
-
 You will also need to enter the discord bot authentication token in `discord/vars.env`:
 ```
 export DISCORD_TOKEN=<Discord API token>
 ```
-
 
 Setup the repo:
 ```
