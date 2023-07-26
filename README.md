@@ -1,45 +1,55 @@
 # tune-bot infrastructure
-scripts for creating the servers, and database
+Scripts for installing the Tunebot services.
 
-This repository should be located at `~/tune-bot/infrastructure`.
+This repository should be located at `~/tune-bot/infrastructure`. 
 
-First you need to enter the database credentials you'll use to connect to the database in `database/vars.env`:
-```
-export DB_USER=<database user>
-export DB_PASS=<database password>
-export DB_HOST=<database host IP>
-```
+You will need your database credentials and Discord API token.
 
-You will also need to enter the discord bot authentication token in `discord/vars.env`:
-```
-export DISCORD_TOKEN=<Discord API token>
-```
+## How to Install
+1. Setup the repo:
+    ```
+    mkdir -p ~/tune-bot
+    cd ~/tune-bot
+    git clone https://github.com/tune-bot/infrastructure.git
+    ```
 
-Setup the repo:
-```
-mkdir -p ~/tune-bot
-cd ~/tune-bot
-git clone https://github.com/tune-bot/infrastructure.git
-```
+2. In `~/tune-bot/infrastructure`, create the environment variable files: `touch database.env discord.env`
 
-Refresh the repo:
-```
-cd infrastructure
-git stash
-git pull
-cd ..
-```
+3. Add your credentials by putting the following text in their respective files:
 
-Create all infrastructure:
-```
-sudo bash infrastructure/install.sh
-```
+    `database.env`:
+    ```
+    export DB_USER=<database user>
+    export DB_PASS=<database password>
+    export DB_HOST=<database host IP>
+    ```
 
-You will then have executables in `~/tune-bot/bin` which can execute each service like this:
+    `discord.env`:
+    ```
+    export DISCORD_TOKEN=<Discord API token>
+    ```
 
-```
-cd ~/tune-bot
-sudo bin/database &
-sudo bin/api &
-sudo bin/discord &
-```
+4. Refresh the repo:
+    ```
+    cd infrastructure
+    git stash
+    git pull
+    cd ..
+    ```
+
+5. Create all infrastructure:
+    ```
+    sudo bash infrastructure/install.sh
+    ```
+
+6. You will then have executables in `~/tune-bot/bin` which can be executed like this:
+
+    ```
+    cd ~/tune-bot
+    sudo bin/database &
+    sudo bin/api &
+    sudo bin/discord &
+    ```
+
+7. (Optional) Update credentials and tokens as needed by modifying the environment variables in `~/tune-bot/vars`. Services will automatically install updates.
+ 

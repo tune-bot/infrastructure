@@ -1,2 +1,1 @@
-database/vars.env
-discord/vars.env
+*.env
