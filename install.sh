@@ -10,8 +10,8 @@ do
     bash $service/infrastructure/install.sh
 done
 
-# Clean up unneeded database files
-rm -rf database
+# Clean up unneeded core files
+rm -rf core
 
 # Move the environment variables to their own directory
 mkdir -p vars

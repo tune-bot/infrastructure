@@ -46,9 +46,9 @@ You will need your database credentials and Discord API token.
 
     ```
     cd ~/tune-bot
-    sudo bin/database &
-    sudo bin/api &
-    sudo bin/discord &
+    sudo bin/core
+    sudo bin/api
+    sudo bin/bot
     ```
 
 7. (Optional) Update credentials and tokens as needed by modifying the environment variables in `~/tune-bot/vars`. Services will automatically install updates.
