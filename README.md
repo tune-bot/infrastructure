@@ -46,7 +46,7 @@ You will need your database credentials and Discord API token.
 
     ```
     cd ~/tune-bot
-    sudo bin/core
+    sudo bin/database
     sudo bin/api
     sudo bin/bot
     ```
